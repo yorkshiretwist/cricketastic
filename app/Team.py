@@ -1,15 +1,18 @@
 import random
 from Randomiser import Randomiser
+from Score import Score
 
 class Team:
 
     name = None
     squad = None
+    score = None
 
     def __init__(self, name, gender):
         rand = Randomiser()
         
         self.name = name
+        self.score = Score()
 
         self.squad = []
         for i in range(11):

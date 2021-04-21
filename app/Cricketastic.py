@@ -24,7 +24,7 @@ class Cricketastic:
             team1_name = self.interrogator.get_text("Enter the name for team 1", "The name must be at least 1 character long")
             team2_name = self.interrogator.get_text("Enter the name for team 2", "The name must be at least 1 character long")
             gender = self.interrogator.get_answer("Is this a mens (M), womens (W) or mixed (X) game?", ["M","W","X"], "Please enter a valid choice")
-            overs = self.interrogator.get_answer("And how many overs in an innings? (20, 30, 50)", ["20","30","50"], "Please enter a valid choice")
+            overs = self.interrogator.get_answer("And how many overs in an innings? (20, 30, 50)", ["2", "20","30","50"], "Please enter a valid choice")
         else:
             team1_name = "Team 1"
             team2_name = "Team 2"

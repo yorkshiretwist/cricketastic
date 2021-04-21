@@ -1,4 +1,4 @@
-from Score import Score
+from Scoreboard import Scoreboard
 from Innings import Innings
 
 class Match:
@@ -6,13 +6,13 @@ class Match:
     team1 = None
     team2 = None
     overs = None
-    score = None
+    scoreboard = None
 
     def __init__(self, team1, team2, overs):
         self.team1 = team1
         self.team2 = team2
         self.overs = overs
-        self.score = Score()
+        self.scoreboard = Scoreboard()
 
     def display_title(self):
         print(self.team1.name + " vs " + self.team2.name)
