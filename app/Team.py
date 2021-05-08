@@ -23,8 +23,11 @@ class Team:
         self.squad[random.randint(0, 10)].captain = True
         self.squad[random.randint(0, 10)].wicket_keeper = True
 
-    def display_squad(self):
+    def print_squad(self):
         for player in self.squad:
             captain = " (C)" if player.captain else ""
             wicket_keeper = " (WK)" if player.wicket_keeper else ""
             print(str(player.number) + ": " + player.name + captain + wicket_keeper)
+
+    def print_name(self):
+        print(self.name)

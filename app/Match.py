@@ -14,7 +14,7 @@ class Match:
         self.overs = overs
         self.scoreboard = Scoreboard()
 
-    def display_title(self):
+    def print_title(self):
         print(self.team1.name + " vs " + self.team2.name)
 
     def start(self, batting_team_name):
@@ -28,6 +28,8 @@ class Match:
         # second innings
         second_innings = Innings(self, bowling_team, batting_team, self.overs)
         second_innings.start()
+
+        self.scoreboard.results(first_innings, second_innings)
 
     def get_team(self, team_name):
         return [team for team in [self.team1, self.team2] if team.name == team_name][0]

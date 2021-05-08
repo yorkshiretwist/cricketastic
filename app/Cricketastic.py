@@ -37,18 +37,18 @@ class Cricketastic:
         team2 = Team(team2_name, gender)
 
         match = Match(team1, team2, int(overs))
-        match.display_title()
+        match.print_title()
 
         print("")
         print("Squads:")
         print("")
 
         print(team1.name + ":")
-        team1.display_squad()
+        team1.print_squad()
         print("")
 
         print(team2.name + ":")
-        team2.display_squad()
+        team2.print_squad()
         print("")
 
         input("Ready to play? Press enter to toss up")

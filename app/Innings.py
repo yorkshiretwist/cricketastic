@@ -61,7 +61,7 @@ class Innings:
             self.match.scoreboard.update(self)
 
             for self.current_ball_number in range(1, 7):
-                play_next_ball = self.play_ball()                
+                play_next_ball = self.play_ball()
                 if play_next_ball == False:
                     innings_ended = True
                     break
@@ -69,6 +69,7 @@ class Innings:
             # next over
             self.current_ball_number = 0
             self.current_over_number += 1
+            self.batting_team.score.total_overs = str(self.current_over_number) + "." + str(self.current_ball_number)
             self.match.scoreboard.update(self)
             self.bowler = self.randomiser.get_next_bowler(self.bowling_team, self.bowler)
             self.swap_ends()
@@ -116,6 +117,8 @@ class Innings:
 
         if self.current_ball.batters_swapped:
             self.swap_ends()
+
+        self.batting_team.score.total_overs = str(self.current_over_number) + "." + str(self.current_ball_number)
 
         self.match.scoreboard.update(self)
         return True
